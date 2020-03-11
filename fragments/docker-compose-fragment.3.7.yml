@@ -1,0 +1,14 @@
+version: '3.7'
+services:
+  common-dev-env-tester-app:
+    container_name: common-dev-env-tester-app
+    build: ./common-dev-env-tester-app
+    restart: on-failure
+    logging:
+      driver: syslog
+      options:
+        syslog-format: "rfc5424"
+        syslog-address: "tcp://localhost:25826"
+        tag: "{{.Name}}"
+    depends_on:
+      - logstash

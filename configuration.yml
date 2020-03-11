@@ -1,0 +1,15 @@
+---
+commodities: ["auth", "db2_community", "db2_devc", "elasticsearch", "elasticsearch5", "nginx", "postgres", "postgres-9.6", "rabbitmq", "redis", "squid", "swagger", "wiremock"]
+
+expensive_startup:
+  - compose_service: common-dev-env-tester-app
+    healthcheck_cmd: echo hello
+    wait_until_healthy:
+      - compose_service: db2_community
+        healthcheck_cmd: docker
+      - compose_service: db2_devc
+        healthcheck_cmd: docker
+      - compose_service: postgres
+        healthcheck_cmd: docker
+      - compose_service: postgres-96
+        healthcheck_cmd: docker
