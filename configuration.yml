@@ -7,9 +7,9 @@ expensive_startup:
     wait_until_healthy:
       - compose_service: db2_community
         healthcheck_cmd: docker
-      - compose_service: db2_devc
-        healthcheck_cmd: docker
       - compose_service: postgres
         healthcheck_cmd: docker
       - compose_service: postgres-96
+        healthcheck_cmd: docker
+      - compose_service: postgres-13
         healthcheck_cmd: docker
