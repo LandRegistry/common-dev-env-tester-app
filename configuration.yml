@@ -1,5 +1,5 @@
 ---
-commodities: ["auth", "db2_community", "db2_devc", "elasticsearch", "elasticsearch5", "nginx", "postgres", "postgres-9.6", "rabbitmq", "redis", "squid", "swagger", "wiremock"]
+commodities: ["auth", "db2_community", "nginx", "postgres", "postgres-9.6", "postgres-13", "rabbitmq", "redis", "squid", "swagger", "wiremock", "auth", "cadence", "cadence-web", "ibmmq", "activemq", "localstack"]
 
 expensive_startup:
   - compose_service: common-dev-env-tester-app
