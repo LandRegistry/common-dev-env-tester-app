@@ -1,5 +1,5 @@
 ---
-commodities: ["auth", "db2_community", "nginx", "postgres-13", "rabbitmq", "redis", "squid", "swagger", "wiremock", "auth", "cadence", "cadence-web", "ibmmq", "activemq", "localstack"]
+commodities: ["auth", "db2_community", "nginx", "postgres-13", "postgres-17", "rabbitmq", "redis", "squid", "swagger", "wiremock", "cadence", "cadence-web", "ibmmq", "activemq", "localstack"]
 
 expensive_startup:
   - compose_service: common-dev-env-tester-app
@@ -8,4 +8,6 @@ expensive_startup:
       - compose_service: db2_community
         healthcheck_cmd: docker
       - compose_service: postgres-13
+        healthcheck_cmd: docker
+      - compose_service: postgres-17
         healthcheck_cmd: docker
